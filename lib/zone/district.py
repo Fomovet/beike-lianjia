@@ -10,6 +10,7 @@ from lib.zone.city import cities
 from lib.const.xpath import *
 from lib.request.headers import *
 from lib.spider.base_spider import SPIDER_NAME
+from bs4 import BeautifulSoup
 
 chinese_city_district_dict = dict()     # 城市代码和中文名映射
 chinese_area_dict = dict()              # 版块代码和中文名映射
@@ -35,6 +36,11 @@ def get_districts(city):
     headers = create_headers()
     response = requests.get(url, timeout=10, headers=headers)
     html = response.content
+    print('请求码')
+    print(response.status_code)
+    htmls= BeautifulSoup(html,'lxml')
+    #print(htmls)
+    print(url)
     root = etree.HTML(html)
     elements = root.xpath(CITY_DISTRICT_XPATH)
     en_names = list()

@@ -69,7 +69,7 @@ class XiaoQuBaseSpider(BaseSpider):
             print(e)
 
         # 从第一页开始,一直遍历到最后一页
-        for i in range(1, total_page + 1):
+        for i in range(1, 1):
             headers = create_headers()
             page = 'http://{0}.{1}.com/xiaoqu/{2}/pg{3}'.format(city, SPIDER_NAME, area, i)
             print(page)  # 打印版块页面地址
@@ -84,7 +84,9 @@ class XiaoQuBaseSpider(BaseSpider):
                 price = house_elem.find('div', class_="totalPrice")
                 name = house_elem.find('div', class_='title')
                 on_sale = house_elem.find('div', class_="xiaoquListItemSellCount")
-
+                img = house_elem.find('img', class_="lj-lazy")
+                print("图片地址")
+                print(img.img.text)
                 # 继续清理数据
                 price = price.text.strip()
                 name = name.text.replace("\n", "")
