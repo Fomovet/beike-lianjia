@@ -4,7 +4,7 @@ import requests
 
 if __name__ == '__main__':
     for item in range(0,100):
-        proxy = 'http://{}:{}@{}:{}'.format('5552ED71', 'CEC487AA75FA', 'tunnel.qg.net', '13611')
+        proxy = 'http://{}:{}@{}:{}'.format('695364BB', '442DC4C7480C', 'tunnel.qg.net', '18634')
         proxies = {
             "http": proxy,
             "https": proxy

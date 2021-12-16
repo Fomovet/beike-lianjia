@@ -14,7 +14,7 @@ def getList():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
     }
     # proxies = {'http': 'http://' + '101.132.178.61:8080'}
-    proxy = 'http://{}:{}@{}:{}'.format('5552ED71', 'CEC487AA75FA', 'tunnel.qg.net', '13611')
+    proxy = 'http://{}:{}@{}:{}'.format('5552ED71', 'CEC487AA75FA', 'tunnel.kuyukuyu.com', '13611')
     proxies = {
         "http": proxy,
         "https": proxy
